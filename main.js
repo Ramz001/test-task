@@ -8,7 +8,7 @@ function serialize(numbers) {
     const index = n - 1;
     const byteIndex = index >> 3;
     const bitIndex = index & 7;
-    bits[byteIndex] |= (1 << bitIndex);
+    bits[byteIndex] |= 1 << bitIndex;
   }
 
   return Buffer.from(bits).toString("base64");
